@@ -1,0 +1,3 @@
+# go-21 heavy dependency tree
+32 direct public modules (+ transitive) so the dependency-download phase is long enough to cancel, refresh, or time.
+Run: go build ./...
