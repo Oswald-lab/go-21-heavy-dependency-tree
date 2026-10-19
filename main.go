@@ -37,6 +37,16 @@ import (
 	_ "github.com/tidwall/gjson"
 )
 
+const (
+	colorReset  = "\033[0m"
+	colorBold   = "\033[1m"
+	colorGreen  = "\033[32m"
+	colorYellow = "\033[33m"
+	colorCyan   = "\033[36m"
+)
+
 func main() {
-	fmt.Println("go-heavy-deps: 32 direct dependencies loaded")
+	fmt.Printf("%s%sgo-heavy-deps%s: %s32 direct dependencies loaded%s\n",
+		colorBold, colorCyan, colorReset, colorGreen, colorReset)
+	fmt.Printf("%sRun `go list -m all` to inspect them.%s\n", colorYellow, colorReset)
 }
